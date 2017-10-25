@@ -30,10 +30,11 @@ public class Phonebook {
     }
     
     public String searchNumber(String name){
-        if(this.entries.contains(name)){
-            //return this.entries.getNumber;
-        } else {
-            return "number not known";
+        for (Person i:entries){    
+           if(i.getName().contains(name)){
+           return i.getNumber();
+           } 
         }
+        return "number not known";
     }
 }
